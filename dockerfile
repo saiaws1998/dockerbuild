@@ -4,11 +4,11 @@ FROM openjdk:11-jre-alpine
 # set shell to bash
 RUN yum update && yum add bash
 
-# Set the working directory to /level
-WORKDIR /level
+# Set the working directory to /app
+WORKDIR /app
 
-# Copy the fat jar into the container at /level
-COPY /target/springcore.jar /level
+# Copy the fat jar into the container at /app
+COPY /target/springcore.jar /app
 
 # Make port 8080 available to the world outside this container
 EXPOSE 8080
